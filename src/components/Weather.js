@@ -1,13 +1,21 @@
 import React from 'react';
 import './styles.css';
-import { Card } from 'semantic-ui-react'
 
-const CardExampleCard = ({weatherData}) => (
-    <Card>
-        <Card.Content>
-            <Card.Header className="header">{weatherData.name}</Card.Header>
-        </Card.Content>
-    </Card>
-)
+
+
+    const CardExampleCard = ({weatherData}) => (
+
+        <div className="main">
+            <p className="header">{weatherData.name}</p>
+            <div className="flex-container">
+                <p className="temp">Temprature: {weatherData.main.temp}</p>
+                <p className="TOD">Sunrise: {weatherData.sys.sunrise}</p>
+                <p className={"TOD"}>Sunset: {weatherData.sys.sunset}</p>
+            </div>
+
+        </div>
+
+
+    )
 
 export default CardExampleCard;
